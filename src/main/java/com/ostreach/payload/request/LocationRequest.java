@@ -6,16 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderLocationRequest {
+public class LocationRequest {
     @Size(min = 3, max = 255, message = "Location too short or long")
-    @NotBlank(message = "Pickup location can not be empty")
+    @NotBlank(message = "Pick-Up location can not be empty")
     private String pickUpLocation;
 
     @Size(min = 3, max = 255, message = "Location too short or long")

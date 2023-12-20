@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TransactionRequest {
 
-    @Size(max = 1000, message = "Receipt too long")
+    @Size(max = 1000, message = "Receipt too long!")
     @NotBlank(message = "Receipt cannot be empty!")
     private String receipt;
 

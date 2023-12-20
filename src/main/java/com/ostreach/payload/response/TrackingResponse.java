@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TrackingLocationResponse {
+public class TrackingResponse {
     private Long locationId;
     private String location;
     private String dateTime;

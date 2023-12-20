@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrackingLocationRequest {
-    @Size(min = 3, max = 255, message = "Location too short or long")
-    @NotBlank(message = "Location cannot be empty")
+public class TrackingRequest {
+    @Size(min = 3, max = 255, message = "Location too short or long!")
+    @NotBlank(message = "Location cannot be empty!")
     private String location;
 }

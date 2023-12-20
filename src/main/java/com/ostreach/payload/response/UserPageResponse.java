@@ -9,8 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class UserPageDTO {
-
+public class UserPageResponse {
     private int pageNo;
     private  int pageSize;
     private Boolean lastPage;

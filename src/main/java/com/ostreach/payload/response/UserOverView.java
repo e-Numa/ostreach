@@ -16,5 +16,5 @@ public class UserOverView {
     private String receiverName;
     private DriverInfo driverInfo;
     private DeliveryStatus deliveryStatus;
-    private List<TrackingLocationResponse> locationList;
+    private List<TrackingResponse> locationList;
 }

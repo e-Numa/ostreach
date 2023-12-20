@@ -22,5 +22,5 @@ public class UserOrderResponse {
     private String itemName;
     private String trackingNum;
     private String imageURL;
-    private List<TrackingLocationResponse> locationList;
+    private List<TrackingResponse> locationList;
 }

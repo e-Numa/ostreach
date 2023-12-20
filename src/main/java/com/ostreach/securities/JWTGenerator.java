@@ -72,7 +72,7 @@ public class JWTGenerator {
                     .parseClaimsJws(token);
             return true;
         } catch (SignatureException ex) {
-            LOG.warn("Token was expired or incorrect");
+            LOG.warn("Token was expired or incorrect!");
             return false;
         }catch (ExpiredJwtException exception){
             LOG.warn("Token was expired!");

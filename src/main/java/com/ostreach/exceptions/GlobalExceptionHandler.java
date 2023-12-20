@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.UNAUTHORIZED)
-                .debugMessage("You are not authorized to login from here")
+                .debugMessage("You are not authorized to login from here!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -35,7 +35,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
-                .debugMessage("Update the default password for the driver")
+                .debugMessage("Update the default password for the driver!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -47,7 +47,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
-                .debugMessage("Check passwords and try again")
+                .debugMessage("Check passwords and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -59,7 +59,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
-                .debugMessage("Email already registered. Login or register with a new email.")
+                .debugMessage("Email already registered! Login or register with a new email.")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -71,7 +71,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .debugMessage("Email sending failed. Try again.")
+                .debugMessage("Email sending failed! Try again.")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -83,7 +83,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_ACCEPTABLE)
-                .debugMessage("Check password and try again.")
+                .debugMessage("Check password and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -95,7 +95,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_FOUND)
-                .debugMessage("Check email and try again.")
+                .debugMessage("Check email and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -107,7 +107,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_FOUND)
-                .debugMessage("Please ask for a new link.")
+                .debugMessage("Please ask for a new link!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -119,7 +119,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_FOUND)
-                .debugMessage("Change new password and try again.")
+                .debugMessage("Change new password and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -131,7 +131,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_FOUND)
-                .debugMessage("Check order id and try again.")
+                .debugMessage("Check order id and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -143,7 +143,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
-                .debugMessage("Oder can not be canceled. 5 minutes have gone by since order was made.")
+                .debugMessage("Order can not be cancelled! 5 minutes have gone by since order was made.")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -155,7 +155,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.NOT_FOUND)
-                .debugMessage("Check task id and try again.")
+                .debugMessage("Check task id and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -167,7 +167,7 @@ public class GlobalExceptionHandler {
         ErrorDetail errorDetail = ErrorDetail.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
-                .debugMessage("Verify email and try again.")
+                .debugMessage("Verify email and try again!")
                 .dateTime(toDateString(LocalDateTime.now()))
                 .build();
         ApiResponse<ErrorDetail> response = new ApiResponse<>(exception.getMessage(), errorDetail);
@@ -188,7 +188,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     public ResponseEntity<ApiResponse<String>> handleMethodArgumentNotValidExceptionException(MethodArgumentNotValidException exception) {
-        String errorMessage = "Request validation failure. Please check your request data.";
+        String errorMessage = "Request validation failure! Please check your request data.";
         BindingResult result = exception.getBindingResult();
         FieldError fieldError = result.getFieldError();
         if(fieldError != null) {
@@ -198,6 +198,4 @@ public class GlobalExceptionHandler {
         ApiResponse<String> apiResponse = new ApiResponse<>(errorMessage);
         return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
     }
-
-
 }

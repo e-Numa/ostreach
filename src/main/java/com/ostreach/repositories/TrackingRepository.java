@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrackingRepository extends JpaRepository<TrackingEntity, Long> {
-    TrackingEntity findByOrderEntityTrackingNum(String trackingNum);
+    TrackingEntity findByOrderEntityTrackingNumber(String trackingNumber);
 }

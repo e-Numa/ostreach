@@ -17,7 +17,7 @@ public class KYDRequest {
     @NotBlank
     private MultipartFile kydPicture;
 
-    @Size(min = 12, max =12, message = "Id number too long or short")
+    @Size(min = 12, max =12, message = "Id number too long or short!")
     @NotBlank(message = "Id number cannot be empty!")
     private String idCardNumber;
 }

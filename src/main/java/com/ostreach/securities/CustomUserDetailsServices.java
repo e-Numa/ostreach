@@ -18,12 +18,12 @@ import java.util.Collections;
 @RequiredArgsConstructor
 public class CustomUserDetailsServices implements UserDetailsService {
 
-    private final UserRepository userRepo;
+    private final UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        UserEntity users = userRepo.findUserEntityByEmail(email)
-                                        .orElseThrow(() -> new UsernameNotFoundException("User not Found"));
+        UserEntity users = userRepository.findUserEntityByEmail(email)
+                                        .orElseThrow(() -> new UsernameNotFoundException("User not Found!"));
 
         return new User(users.getEmail(), users.getPassword(), mapRolesToAuthorities(users));
     }

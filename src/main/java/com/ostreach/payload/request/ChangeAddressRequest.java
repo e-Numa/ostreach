@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Getter
 public class ChangeAddressRequest {
-    @Size(min = 3, max = 100, message = "Address is too long or short")
+    @Size(min = 3, max = 100, message = "Address is too long or short!")
     @NotBlank(message = "Address cannot be empty!")
     private String address;
 }

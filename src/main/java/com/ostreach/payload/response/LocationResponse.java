@@ -3,12 +3,12 @@ package com.ostreach.payload.response;
 import lombok.*;
 
 @Getter
+@Builder
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class OrderDescriptionResponse {
-    private String itemDescription;
+public class LocationResponse {
+    private Long orderId;
     private String pickUpLocation;
     private String dropOffLocation;
 }

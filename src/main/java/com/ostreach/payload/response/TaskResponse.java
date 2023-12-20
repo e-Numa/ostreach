@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class DriverTaskResponse {
+public class TaskResponse {
     private Long id;
     private TaskStatus taskStatus;
     private List<OrderResponse> orderResponse;

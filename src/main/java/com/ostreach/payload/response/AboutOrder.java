@@ -27,5 +27,5 @@ public class AboutOrder {
     private String phoneNum;
     private String address;
     private String imageURL;
-    private List<TrackingLocationResponse> locationList;
+    private List<TrackingResponse> locationList;
 }

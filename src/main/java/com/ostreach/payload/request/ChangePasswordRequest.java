@@ -6,15 +6,15 @@ import lombok.Getter;
 
 @Getter
 public class ChangePasswordRequest {
-    @NotBlank(message = "Password cannot be blank")
+    @NotBlank(message = "Password cannot be blank!")
     private String oldPassword;
 
-    @Size(min = 4, max = 15, message = "Password too short or long")
-    @NotBlank(message = "Password cannot be blank")
+    @Size(min = 4, max = 15, message = "Password too short or long!")
+    @NotBlank(message = "Password cannot be blank!")
     private String newPassword;
 
-    @Size(min = 4, max = 15, message = "Password too short or long")
-    @NotBlank(message = "Password cannot be blank")
+    @Size(min = 4, max = 15, message = "Password too short or long!")
+    @NotBlank(message = "Password cannot be blank!")
     private String confirmNewPassword;
 
 }

@@ -12,11 +12,11 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ResetPasswordRequest {
-    @Size(min = 4, max = 15, message = "Password too short or long")
+    @Size(min = 4, max = 15, message = "Password too short or long!")
     @NotBlank(message = "Password cannot be blank!")
     private String newPassword;
 
-    @Size(min = 4, max = 15, message = "Password too short or long")
+    @Size(min = 4, max = 15, message = "Password too short or long!")
     @NotBlank(message = "Password cannot be blank!")
     private String confirmPassword;
 }
